@@ -210,13 +210,13 @@
 			children = (
 				9849F3CF19DC285E006FF547 /* BaseScene.h */,
 				9849F3D019DC285E006FF547 /* BaseScene.m */,
-				3EA67CC51B55F686002847CC /* MyParticle.sks */,
-				9849F3CC19DC2830006FF547 /* MainScene.h */,
-				9849F3CD19DC2830006FF547 /* MainScene.m */,
 				98476F8319DF98BA001AB9C1 /* RestartView.h */,
 				98476F8419DF98BA001AB9C1 /* RestartView.m */,
 				3E851E441B5054F900DB0BC2 /* ScoreLabel.h */,
 				3E851E451B5054F900DB0BC2 /* ScoreLabel.m */,
+				3EA67CC51B55F686002847CC /* MyParticle.sks */,
+				9849F3CC19DC2830006FF547 /* MainScene.h */,
+				9849F3CD19DC2830006FF547 /* MainScene.m */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -285,6 +285,9 @@
 					9849F39019DC2777006FF547 = {
 						DevelopmentTeam = CYNFYQQLZ9;
 						SystemCapabilities = {
+							com.apple.DataProtection = {
+								enabled = 1;
+							};
 							com.apple.GameCenter = {
 								enabled = 1;
 							};
@@ -439,6 +442,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_TESTABILITY = YES;
@@ -479,6 +483,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
