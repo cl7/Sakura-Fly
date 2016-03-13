@@ -9,7 +9,8 @@ Sakura Fly
 <img src="https://cloud.githubusercontent.com/assets/6619146/13731452/49347728-e93f-11e5-862d-0e8dedf84357.png"  width="120">
 </a>
 
-Sakura Fly is a 2D action iOS game developed with SpriteKit. Available free on the App Store.
+Sakura Fly is an iOS game developed with Apple's native game engine <a href="https://developer.apple.com/library/ios/documentation/GraphicsAnimation/Conceptual/SpriteKit_PG/Introduction/Introduction.html">SpriteKit</a>.
+Available free on the App Store.
 
 ## Rule
 
