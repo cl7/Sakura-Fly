@@ -1,0 +1,567 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3E851E461B5054F900DB0BC2 /* ScoreLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E851E451B5054F900DB0BC2 /* ScoreLabel.m */; };
+		3EA67CB81B549B69002847CC /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EA67CB71B549B69002847CC /* GameKit.framework */; };
+		3EA67CC71B55F686002847CC /* MyParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3EA67CC51B55F686002847CC /* MyParticle.sks */; };
+		3EA67CCE1B560AE3002847CC /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EA67CCD1B560AE3002847CC /* iAd.framework */; };
+		3EA67CD01B560EBF002847CC /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EA67CCF1B560EBF002847CC /* StoreKit.framework */; };
+		3EAE66241C6F9E9800F0EDB8 /* chip.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EAE66231C6F9E9800F0EDB8 /* chip.png */; };
+		3EAE67411C7A2A9E00F0EDB8 /* Sakura_FlyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAE67401C7A2A9E00F0EDB8 /* Sakura_FlyTests.swift */; };
+		3EDB6B7F1C951142007BF24F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EDB6B7E1C951142007BF24F /* Default-568h@2x.png */; };
+		3EED2E441B51FD35008E998F /* backGround.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3EED2E431B51FD35008E998F /* backGround.mp3 */; };
+		98476F8519DF98BA001AB9C1 /* RestartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 98476F8419DF98BA001AB9C1 /* RestartView.m */; };
+		98476F8B19DFC39C001AB9C1 /* sfx_hit.caf in Resources */ = {isa = PBXBuildFile; fileRef = 98476F8819DFC39C001AB9C1 /* sfx_hit.caf */; };
+		98476F8D19DFC39C001AB9C1 /* sfx_wing.caf in Resources */ = {isa = PBXBuildFile; fileRef = 98476F8A19DFC39C001AB9C1 /* sfx_wing.caf */; };
+		98476F9119DFC7E9001AB9C1 /* sfx_point.caf in Resources */ = {isa = PBXBuildFile; fileRef = 98476F9019DFC7E9001AB9C1 /* sfx_point.caf */; };
+		9849F39519DC2777006FF547 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9849F39419DC2777006FF547 /* Foundation.framework */; };
+		9849F39719DC2777006FF547 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9849F39619DC2777006FF547 /* CoreGraphics.framework */; };
+		9849F39919DC2777006FF547 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9849F39819DC2777006FF547 /* UIKit.framework */; };
+		9849F39F19DC2777006FF547 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9849F39D19DC2777006FF547 /* InfoPlist.strings */; };
+		9849F3A119DC2777006FF547 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9849F3A019DC2777006FF547 /* main.m */; };
+		9849F3A519DC2777006FF547 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9849F3A419DC2777006FF547 /* AppDelegate.m */; };
+		9849F3A719DC2777006FF547 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9849F3A619DC2777006FF547 /* Images.xcassets */; };
+		9849F3C719DC27E8006FF547 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9849F3C519DC27E8006FF547 /* MainViewController.m */; };
+		9849F3C819DC27E8006FF547 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9849F3C619DC27E8006FF547 /* MainViewController.xib */; };
+		9849F3CB19DC2811006FF547 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9849F3CA19DC2811006FF547 /* SpriteKit.framework */; };
+		9849F3CE19DC2830006FF547 /* MainScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 9849F3CD19DC2830006FF547 /* MainScene.m */; };
+		9849F3D119DC285E006FF547 /* BaseScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 9849F3D019DC285E006FF547 /* BaseScene.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3EAE67431C7A2A9E00F0EDB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9849F38919DC2777006FF547 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9849F39019DC2777006FF547;
+			remoteInfo = "Sakura Fly";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3E851E441B5054F900DB0BC2 /* ScoreLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScoreLabel.h; path = Scenes/ScoreLabel.h; sourceTree = "<group>"; };
+		3E851E451B5054F900DB0BC2 /* ScoreLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScoreLabel.m; path = Scenes/ScoreLabel.m; sourceTree = "<group>"; };
+		3EA67CB71B549B69002847CC /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		3EA67CC51B55F686002847CC /* MyParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyParticle.sks; sourceTree = "<group>"; };
+		3EA67CCD1B560AE3002847CC /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		3EA67CCF1B560EBF002847CC /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		3EAE66231C6F9E9800F0EDB8 /* chip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = chip.png; path = SupportingFiles/chip.png; sourceTree = "<group>"; };
+		3EAE673E1C7A2A9E00F0EDB8 /* Sakura FlyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sakura FlyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EAE67401C7A2A9E00F0EDB8 /* Sakura_FlyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sakura_FlyTests.swift; sourceTree = "<group>"; };
+		3EAE67421C7A2A9E00F0EDB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3EDB6B7E1C951142007BF24F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		3EED2E431B51FD35008E998F /* backGround.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backGround.mp3; sourceTree = "<group>"; };
+		98476F8319DF98BA001AB9C1 /* RestartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RestartView.h; path = Scenes/RestartView.h; sourceTree = "<group>"; };
+		98476F8419DF98BA001AB9C1 /* RestartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RestartView.m; path = Scenes/RestartView.m; sourceTree = "<group>"; };
+		98476F8819DFC39C001AB9C1 /* sfx_hit.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sfx_hit.caf; sourceTree = "<group>"; };
+		98476F8A19DFC39C001AB9C1 /* sfx_wing.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sfx_wing.caf; sourceTree = "<group>"; };
+		98476F9019DFC7E9001AB9C1 /* sfx_point.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sfx_point.caf; sourceTree = "<group>"; };
+		9849F39119DC2777006FF547 /* Sakura Fly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sakura Fly.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9849F39419DC2777006FF547 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9849F39619DC2777006FF547 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9849F39819DC2777006FF547 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9849F39C19DC2777006FF547 /* SakuraFly-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SakuraFly-Info.plist"; sourceTree = "<group>"; };
+		9849F39E19DC2777006FF547 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9849F3A019DC2777006FF547 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9849F3A219DC2777006FF547 /* SakuraFly-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SakuraFly-Prefix.pch"; sourceTree = "<group>"; };
+		9849F3A319DC2777006FF547 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9849F3A419DC2777006FF547 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9849F3A619DC2777006FF547 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9849F3AD19DC2777006FF547 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		9849F3C419DC27E8006FF547 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = SakuraFly/Controllers/MainViewController.h; sourceTree = "<group>"; };
+		9849F3C519DC27E8006FF547 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = SakuraFly/Controllers/MainViewController.m; sourceTree = "<group>"; };
+		9849F3C619DC27E8006FF547 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainViewController.xib; path = SakuraFly/Controllers/MainViewController.xib; sourceTree = "<group>"; };
+		9849F3CA19DC2811006FF547 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		9849F3CC19DC2830006FF547 /* MainScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainScene.h; path = Scenes/MainScene.h; sourceTree = "<group>"; };
+		9849F3CD19DC2830006FF547 /* MainScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainScene.m; path = Scenes/MainScene.m; sourceTree = "<group>"; };
+		9849F3CF19DC285E006FF547 /* BaseScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseScene.h; path = Scenes/BaseScene.h; sourceTree = "<group>"; };
+		9849F3D019DC285E006FF547 /* BaseScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseScene.m; path = Scenes/BaseScene.m; sourceTree = "<group>"; };
+		9849F3D319DC2ACF006FF547 /* Defines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Defines.h; path = SakuraFly/SupportingFiles/Common/Defines.h; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3EAE673B1C7A2A9E00F0EDB8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9849F38E19DC2777006FF547 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EA67CCE1B560AE3002847CC /* iAd.framework in Frameworks */,
+				3EA67CD01B560EBF002847CC /* StoreKit.framework in Frameworks */,
+				9849F3CB19DC2811006FF547 /* SpriteKit.framework in Frameworks */,
+				9849F39719DC2777006FF547 /* CoreGraphics.framework in Frameworks */,
+				9849F39919DC2777006FF547 /* UIKit.framework in Frameworks */,
+				9849F39519DC2777006FF547 /* Foundation.framework in Frameworks */,
+				3EA67CB81B549B69002847CC /* GameKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3EAE673F1C7A2A9E00F0EDB8 /* Sakura FlyTests */ = {
+			isa = PBXGroup;
+			children = (
+				3EAE67401C7A2A9E00F0EDB8 /* Sakura_FlyTests.swift */,
+				3EAE67421C7A2A9E00F0EDB8 /* Info.plist */,
+			);
+			path = "Sakura FlyTests";
+			sourceTree = "<group>";
+		};
+		98476F8719DFC39C001AB9C1 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				98476F9019DFC7E9001AB9C1 /* sfx_point.caf */,
+				98476F8819DFC39C001AB9C1 /* sfx_hit.caf */,
+				98476F8A19DFC39C001AB9C1 /* sfx_wing.caf */,
+				3EED2E431B51FD35008E998F /* backGround.mp3 */,
+			);
+			name = Sound;
+			path = SupportingFiles/Sound;
+			sourceTree = "<group>";
+		};
+		9849F38819DC2777006FF547 = {
+			isa = PBXGroup;
+			children = (
+				3EDB6B7E1C951142007BF24F /* Default-568h@2x.png */,
+				9849F39A19DC2777006FF547 /* Sakura Fly */,
+				3EAE673F1C7A2A9E00F0EDB8 /* Sakura FlyTests */,
+				9849F39319DC2777006FF547 /* Frameworks */,
+				9849F39219DC2777006FF547 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9849F39219DC2777006FF547 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9849F39119DC2777006FF547 /* Sakura Fly.app */,
+				3EAE673E1C7A2A9E00F0EDB8 /* Sakura FlyTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9849F39319DC2777006FF547 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3EA67CCF1B560EBF002847CC /* StoreKit.framework */,
+				3EA67CCD1B560AE3002847CC /* iAd.framework */,
+				3EA67CB71B549B69002847CC /* GameKit.framework */,
+				9849F3CA19DC2811006FF547 /* SpriteKit.framework */,
+				9849F39419DC2777006FF547 /* Foundation.framework */,
+				9849F39619DC2777006FF547 /* CoreGraphics.framework */,
+				9849F39819DC2777006FF547 /* UIKit.framework */,
+				9849F3AD19DC2777006FF547 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9849F39A19DC2777006FF547 /* Sakura Fly */ = {
+			isa = PBXGroup;
+			children = (
+				9849F3A319DC2777006FF547 /* AppDelegate.h */,
+				9849F3A419DC2777006FF547 /* AppDelegate.m */,
+				9849F3C919DC27EF006FF547 /* Scenes */,
+				9849F3C319DC2784006FF547 /* Controllers */,
+				9849F3A619DC2777006FF547 /* Images.xcassets */,
+				9849F39B19DC2777006FF547 /* Supporting Files */,
+			);
+			name = "Sakura Fly";
+			path = SakuraFly;
+			sourceTree = "<group>";
+		};
+		9849F39B19DC2777006FF547 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3EAE66231C6F9E9800F0EDB8 /* chip.png */,
+				98476F8719DFC39C001AB9C1 /* Sound */,
+				9849F3D219DC2AA8006FF547 /* Common */,
+				9849F39C19DC2777006FF547 /* SakuraFly-Info.plist */,
+				9849F39D19DC2777006FF547 /* InfoPlist.strings */,
+				9849F3A019DC2777006FF547 /* main.m */,
+				9849F3A219DC2777006FF547 /* SakuraFly-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9849F3C319DC2784006FF547 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9849F3C419DC27E8006FF547 /* MainViewController.h */,
+				9849F3C519DC27E8006FF547 /* MainViewController.m */,
+				9849F3C619DC27E8006FF547 /* MainViewController.xib */,
+			);
+			name = Controllers;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		9849F3C919DC27EF006FF547 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				9849F3CF19DC285E006FF547 /* BaseScene.h */,
+				9849F3D019DC285E006FF547 /* BaseScene.m */,
+				3EA67CC51B55F686002847CC /* MyParticle.sks */,
+				9849F3CC19DC2830006FF547 /* MainScene.h */,
+				9849F3CD19DC2830006FF547 /* MainScene.m */,
+				98476F8319DF98BA001AB9C1 /* RestartView.h */,
+				98476F8419DF98BA001AB9C1 /* RestartView.m */,
+				3E851E441B5054F900DB0BC2 /* ScoreLabel.h */,
+				3E851E451B5054F900DB0BC2 /* ScoreLabel.m */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		9849F3D219DC2AA8006FF547 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				9849F3D319DC2ACF006FF547 /* Defines.h */,
+			);
+			name = Common;
+			path = SakuraFlyTests;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3EAE673D1C7A2A9E00F0EDB8 /* Sakura FlyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3EAE67451C7A2A9E00F0EDB8 /* Build configuration list for PBXNativeTarget "Sakura FlyTests" */;
+			buildPhases = (
+				3EAE673A1C7A2A9E00F0EDB8 /* Sources */,
+				3EAE673B1C7A2A9E00F0EDB8 /* Frameworks */,
+				3EAE673C1C7A2A9E00F0EDB8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3EAE67441C7A2A9E00F0EDB8 /* PBXTargetDependency */,
+			);
+			name = "Sakura FlyTests";
+			productName = "Sakura FlyTests";
+			productReference = 3EAE673E1C7A2A9E00F0EDB8 /* Sakura FlyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9849F39019DC2777006FF547 /* Sakura Fly */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9849F3BD19DC2777006FF547 /* Build configuration list for PBXNativeTarget "Sakura Fly" */;
+			buildPhases = (
+				9849F38D19DC2777006FF547 /* Sources */,
+				9849F38E19DC2777006FF547 /* Frameworks */,
+				9849F38F19DC2777006FF547 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Sakura Fly";
+			productName = SakuraFly;
+			productReference = 9849F39119DC2777006FF547 /* Sakura Fly.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9849F38919DC2777006FF547 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Chenglin;
+				TargetAttributes = {
+					3EAE673D1C7A2A9E00F0EDB8 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 9849F39019DC2777006FF547;
+					};
+					9849F39019DC2777006FF547 = {
+						DevelopmentTeam = CYNFYQQLZ9;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 9849F38C19DC2777006FF547 /* Build configuration list for PBXProject "SakuraFly" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9849F38819DC2777006FF547;
+			productRefGroup = 9849F39219DC2777006FF547 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9849F39019DC2777006FF547 /* Sakura Fly */,
+				3EAE673D1C7A2A9E00F0EDB8 /* Sakura FlyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3EAE673C1C7A2A9E00F0EDB8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9849F38F19DC2777006FF547 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98476F8D19DFC39C001AB9C1 /* sfx_wing.caf in Resources */,
+				98476F8B19DFC39C001AB9C1 /* sfx_hit.caf in Resources */,
+				3EAE66241C6F9E9800F0EDB8 /* chip.png in Resources */,
+				3EDB6B7F1C951142007BF24F /* Default-568h@2x.png in Resources */,
+				9849F39F19DC2777006FF547 /* InfoPlist.strings in Resources */,
+				9849F3C819DC27E8006FF547 /* MainViewController.xib in Resources */,
+				9849F3A719DC2777006FF547 /* Images.xcassets in Resources */,
+				98476F9119DFC7E9001AB9C1 /* sfx_point.caf in Resources */,
+				3EED2E441B51FD35008E998F /* backGround.mp3 in Resources */,
+				3EA67CC71B55F686002847CC /* MyParticle.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3EAE673A1C7A2A9E00F0EDB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EAE67411C7A2A9E00F0EDB8 /* Sakura_FlyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9849F38D19DC2777006FF547 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9849F3A519DC2777006FF547 /* AppDelegate.m in Sources */,
+				3E851E461B5054F900DB0BC2 /* ScoreLabel.m in Sources */,
+				9849F3CE19DC2830006FF547 /* MainScene.m in Sources */,
+				9849F3C719DC27E8006FF547 /* MainViewController.m in Sources */,
+				9849F3D119DC285E006FF547 /* BaseScene.m in Sources */,
+				98476F8519DF98BA001AB9C1 /* RestartView.m in Sources */,
+				9849F3A119DC2777006FF547 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3EAE67441C7A2A9E00F0EDB8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9849F39019DC2777006FF547 /* Sakura Fly */;
+			targetProxy = 3EAE67431C7A2A9E00F0EDB8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9849F39D19DC2777006FF547 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9849F39E19DC2777006FF547 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3EAE67461C7A2A9E00F0EDB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Sakura FlyTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.leetcode.swift.Sakura-FlyTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sakura Fly.app/Sakura Fly";
+			};
+			name = Debug;
+		};
+		3EAE67471C7A2A9E00F0EDB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Sakura FlyTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.leetcode.swift.Sakura-FlyTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sakura Fly.app/Sakura Fly";
+			};
+			name = Release;
+		};
+		9849F3BB19DC2777006FF547 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "2f48e06e-44bd-4448-a2c0-ffee97635f3c";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9849F3BC19DC2777006FF547 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PROVISIONING_PROFILE = "2f48e06e-44bd-4448-a2c0-ffee97635f3c";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9849F3BE19DC2777006FF547 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SakuraFly/SakuraFly-Prefix.pch";
+				INFOPLIST_FILE = "SakuraFly/SakuraFly-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.3lgy.paper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9849F3BF19DC2777006FF547 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SakuraFly/SakuraFly-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "SCENE=3";
+				INFOPLIST_FILE = "SakuraFly/SakuraFly-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.3lgy.paper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3EAE67451C7A2A9E00F0EDB8 /* Build configuration list for PBXNativeTarget "Sakura FlyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EAE67461C7A2A9E00F0EDB8 /* Debug */,
+				3EAE67471C7A2A9E00F0EDB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9849F38C19DC2777006FF547 /* Build configuration list for PBXProject "SakuraFly" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9849F3BB19DC2777006FF547 /* Debug */,
+				9849F3BC19DC2777006FF547 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9849F3BD19DC2777006FF547 /* Build configuration list for PBXNativeTarget "Sakura Fly" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9849F3BE19DC2777006FF547 /* Debug */,
+				9849F3BF19DC2777006FF547 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9849F38919DC2777006FF547 /* Project object */;
+}
