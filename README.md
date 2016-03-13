@@ -14,7 +14,7 @@ Available free on the App Store.
 
 ## Rule
 
-Keep paper plane on the screen and hit sakura flowers to score, it may feel tough at first.
+Tap to keep paper plane on screen and hit sakura flowers to score, it may feel tough at first.
 
 ## Demo
 
