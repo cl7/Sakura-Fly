@@ -171,8 +171,8 @@
 			children = (
 				9849F3A319DC2777006FF547 /* AppDelegate.h */,
 				9849F3A419DC2777006FF547 /* AppDelegate.m */,
-				9849F3C919DC27EF006FF547 /* Scenes */,
-				9849F3C319DC2784006FF547 /* Controllers */,
+				9849F3C919DC27EF006FF547 /* SKScenes */,
+				9849F3C319DC2784006FF547 /* ViewController */,
 				9849F3A619DC2777006FF547 /* Images.xcassets */,
 				9849F39B19DC2777006FF547 /* Supporting Files */,
 			);
@@ -194,18 +194,18 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		9849F3C319DC2784006FF547 /* Controllers */ = {
+		9849F3C319DC2784006FF547 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				9849F3C419DC27E8006FF547 /* MainViewController.h */,
 				9849F3C519DC27E8006FF547 /* MainViewController.m */,
 				9849F3C619DC27E8006FF547 /* MainViewController.xib */,
 			);
-			name = Controllers;
+			name = ViewController;
 			path = ..;
 			sourceTree = "<group>";
 		};
-		9849F3C919DC27EF006FF547 /* Scenes */ = {
+		9849F3C919DC27EF006FF547 /* SKScenes */ = {
 			isa = PBXGroup;
 			children = (
 				9849F3CF19DC285E006FF547 /* BaseScene.h */,
@@ -218,7 +218,7 @@
 				9849F3CC19DC2830006FF547 /* PrimaryScene.h */,
 				9849F3CD19DC2830006FF547 /* PrimaryScene.m */,
 			);
-			name = Scenes;
+			name = SKScenes;
 			sourceTree = "<group>";
 		};
 		9849F3D219DC2AA8006FF547 /* Common */ = {
