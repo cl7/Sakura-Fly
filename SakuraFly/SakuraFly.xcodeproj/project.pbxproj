@@ -210,13 +210,13 @@
 			children = (
 				9849F3CF19DC285E006FF547 /* BaseScene.h */,
 				9849F3D019DC285E006FF547 /* BaseScene.m */,
-				3EA67CC51B55F686002847CC /* MyParticle.sks */,
-				9849F3CC19DC2830006FF547 /* MainScene.h */,
-				9849F3CD19DC2830006FF547 /* MainScene.m */,
 				98476F8319DF98BA001AB9C1 /* RestartView.h */,
 				98476F8419DF98BA001AB9C1 /* RestartView.m */,
 				3E851E441B5054F900DB0BC2 /* ScoreLabel.h */,
 				3E851E451B5054F900DB0BC2 /* ScoreLabel.m */,
+				3EA67CC51B55F686002847CC /* MyParticle.sks */,
+				9849F3CC19DC2830006FF547 /* MainScene.h */,
+				9849F3CD19DC2830006FF547 /* MainScene.m */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
