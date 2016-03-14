@@ -20,7 +20,4 @@ Tap to keep paper plane on screen and hit sakura flowers to score, it may feel t
 
 <img src="https://cloud.githubusercontent.com/assets/6619146/13731560/965791fe-e942-11e5-9a11-f66f404fa18c.gif" width="200">
 
-##License
-Sakura Fly's source code is available under the BSD license. 
 
-Although technically permitted by the license terms, please do not submit your own version of Sakura Fly to the App Store.
