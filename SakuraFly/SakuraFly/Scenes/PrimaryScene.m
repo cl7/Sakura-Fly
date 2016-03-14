@@ -12,6 +12,7 @@
 
 @import GameKit;
 
+//Category bit masks
 static const uint32_t heroCategory = 0x1 << 0;
 static const uint32_t wallCategory = 0x1 << 1;
 static const uint32_t holeCategory = 0x1 << 2;

@@ -10,6 +10,6 @@
 
 @interface ScoreLabel : SKSpriteNode
 
-@property NSString* finalPoint;
+@property(nonatomic, copy) NSString* finalPoint;
 
 @end
