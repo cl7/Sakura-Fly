@@ -8,19 +8,19 @@
 
 #import <SpriteKit/SpriteKit.h>
 
-@class RestartView;
+@class RestartLabel;
 @protocol RestartViewDelegate <NSObject>
 
-- (void)restartView:(RestartView *)restartView didPressRestartButton:(SKSpriteNode *)restartButton;
-- (void)restartView:(RestartView *)restartView didPressLeaderboardButton:(SKSpriteNode *)restartButton;
+- (void)restartView:(RestartLabel *)restartView didPressRestartButton:(SKSpriteNode *)restartButton;
+- (void)restartView:(RestartLabel *)restartView didPressLeaderboardButton:(SKSpriteNode *)restartButton;
 -(void)showFullScreenAd;
 @end
 
-@interface RestartView : SKSpriteNode
+@interface RestartLabel : SKSpriteNode
 
 @property (weak, nonatomic) id <RestartViewDelegate> delegate;
 @property NSString* finalPoint;
-+ (RestartView *)getInstanceWithSize:(CGSize)size Point:(NSString *)point;
++ (RestartLabel *)getInstanceWithSize:(CGSize)size Point:(NSString *)point;
 - (void)dismiss;
 - (void)showInScene:(SKScene *)scene;
 

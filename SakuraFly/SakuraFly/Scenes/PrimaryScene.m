@@ -6,8 +6,8 @@
 //  Copyright (c) 2015年 Chenglin. All rights reserved.
 //
 
-#import "MainScene.h"
-#import "RestartView.h"
+#import "PrimaryScene.h"
+#import "RestartLabel.h"
 #import "MainViewController.h"
 
 @import GameKit;
@@ -19,7 +19,7 @@ static const uint32_t groundCategory = 0x1 << 3;
 static const uint32_t edgeCategory = 0x1 << 4;
 static const uint32_t flowerCategory = 0x1 << 4;
 
-@interface MainScene() <SKPhysicsContactDelegate, RestartViewDelegate,GKGameCenterControllerDelegate>
+@interface PrimaryScene() <SKPhysicsContactDelegate, RestartViewDelegate,GKGameCenterControllerDelegate>
 
 @property (strong, nonatomic) SKAction *moveWallAction, *moveHeadAction;
 @property (strong, nonatomic) SKSpriteNode *hero, *ground, *ceiling;
@@ -28,7 +28,7 @@ static const uint32_t flowerCategory = 0x1 << 4;
 
 @end
 
-@implementation MainScene
+@implementation PrimaryScene
 
 - (void)initalize
 {
@@ -60,7 +60,7 @@ static const uint32_t flowerCategory = 0x1 << 4;
 
 #pragma mark - RestartViewDelegate
 
-- (void)restartView:(RestartView *)restartView didPressRestartButton:(SKSpriteNode *)restartButton
+- (void)restartView:(RestartLabel *)restartView didPressRestartButton:(SKSpriteNode *)restartButton
 {
     [restartView dismiss];
     
@@ -69,7 +69,7 @@ static const uint32_t flowerCategory = 0x1 << 4;
     [self showFullScreenAd];
 #endif
 }
-- (void)restartView:(RestartView *)restartView didPressLeaderboardButton:(SKSpriteNode *)restartButton{
+- (void)restartView:(RestartLabel *)restartView didPressLeaderboardButton:(SKSpriteNode *)restartButton{
     [self showLeaderboard];
 }
 -(void)showFullScreenAd{
@@ -130,7 +130,7 @@ static const uint32_t flowerCategory = 0x1 << 4;
     if([_labelNode.text isEqualToString:@""])
         _labelNode.text=@"0";
     NSString *result=_labelNode.text;
-    RestartView *restartView = [RestartView getInstanceWithSize:self.size Point:result];
+    RestartLabel *restartView = [RestartLabel getInstanceWithSize:self.size Point:result];
     restartView.delegate = self;
     [restartView showInScene:self];
     _labelNode.text=@"";
