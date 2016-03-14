@@ -7,7 +7,7 @@
 //
 #define NODENAME_BUTTON @"button"
 #import "RestartLabel.h"
-#import "MainViewController.h"
+#import "InitialViewController.h"
 
 @import GameKit;
 @interface RestartLabel()

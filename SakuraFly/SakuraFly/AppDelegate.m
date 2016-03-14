@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "MainViewController.h"
+#import "InitialViewController.h"
 #import <AVFoundation/AVFoundation.h>
 
 @implementation AppDelegate
@@ -17,7 +17,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
 
-    MainViewController *mainViewCon = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
+    InitialViewController *mainViewCon = [[InitialViewController alloc] initWithNibName:@"InitialViewController" bundle:nil];
     self.window.rootViewController = mainViewCon;
     
     [self.window makeKeyAndVisible];
