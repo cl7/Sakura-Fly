@@ -39,21 +39,19 @@ static const uint32_t flowerCategory = 0x1 << 4;
     self.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
     self.physicsBody.categoryBitMask = edgeCategory;
     self.physicsWorld.contactDelegate = self;
-    
     self.moveWallAction = [SKAction sequence:@[[SKAction moveToX:-WALL_WIDTH duration:TIMEINTERVAL_MOVEWALL],[SKAction removeFromParent]]];
     SKAction *upHeadAction = [SKAction rotateToAngle:M_PI / 6 duration:0.2f];
     upHeadAction.timingMode = SKActionTimingEaseOut;
     SKAction *downHeadAction = [SKAction rotateToAngle:-M_PI / 2 duration:0.8f];
     downHeadAction.timingMode = SKActionTimingEaseOut;
     self.moveHeadAction = [SKAction sequence:@[upHeadAction, downHeadAction,]];
-    
     [self addGroundNode];
     [self addCeiling];
     [self addHeroNode];
     [self addResultLabelNode];
     [self addInstruction];
     [self runAction:[SKAction repeatActionForever:[SKAction sequence:@[
-                                                                       [SKAction performSelector:@selector(addDust) onTarget:self],
+                                                                       [SKAction performSelector:@selector(addFlower) onTarget:self],
                                                                        [SKAction waitForDuration:0.3f],
                                                                        ]]] withKey:ACTIONKEY_ADDFLOWER];
 }
@@ -63,7 +61,6 @@ static const uint32_t flowerCategory = 0x1 << 4;
 - (void)restartView:(RestartLabel *)restartView didPressRestartButton:(SKSpriteNode *)restartButton
 {
     [restartView dismiss];
-    
     [self restart];
 #ifndef DEBUG
     [self showFullScreenAd];
@@ -80,7 +77,6 @@ static const uint32_t flowerCategory = 0x1 << 4;
     [(MainViewController*)self.view.window.rootViewController showFullScreenAd];
 #endif
 }
-
 -(void)showLeaderboard{
     GKGameCenterViewController *gcViewController = [[GKGameCenterViewController alloc] init];
     gcViewController.gameCenterDelegate = self;
@@ -108,7 +104,6 @@ static const uint32_t flowerCategory = 0x1 << 4;
                                              [SKAction performSelector:@selector(addWall) onTarget:self],
                                              [SKAction waitForDuration:TIMEINTERVAL_ADDWALL],
                                              ]];
-    
     [self runAction:[SKAction repeatActionForever:addWall] withKey:ACTIONKEY_ADDWALL];
 }
 
@@ -116,11 +111,8 @@ static const uint32_t flowerCategory = 0x1 << 4;
 {
     self.isGameOver = YES;
     self.isGameStart=NO;
-    
     [_hero removeActionForKey:ACTIONKEY_MOVEHEAD];
-    
     [self removeActionForKey:ACTIONKEY_ADDWALL];
-    
     [self enumerateChildNodesWithName:NODENAME_WALL usingBlock:^(SKNode *node, BOOL *stop) {
         [node removeActionForKey:ACTIONKEY_MOVEWALL];
     }];
@@ -134,7 +126,6 @@ static const uint32_t flowerCategory = 0x1 << 4;
     restartView.delegate = self;
     [restartView showInScene:self];
     _labelNode.text=@"";
-    
 }
 
 - (void)restart
@@ -144,7 +135,6 @@ static const uint32_t flowerCategory = 0x1 << 4;
     [self enumerateChildNodesWithName:NODENAME_HOLE usingBlock:^(SKNode *node, BOOL *stop) {
         [node removeFromParent];
     }];
-    
     [self enumerateChildNodesWithName:NODENAME_WALL usingBlock:^(SKNode *node, BOOL *stop) {
         [node removeFromParent];
     }];
@@ -152,7 +142,7 @@ static const uint32_t flowerCategory = 0x1 << 4;
     self.hero = nil;
     [self addHeroNode];
     [self runAction:[SKAction repeatActionForever:[SKAction sequence:@[
-                                                                       [SKAction performSelector:@selector(addDust) onTarget:self],
+                                                                       [SKAction performSelector:@selector(addFlower) onTarget:self],
                                                                        [SKAction waitForDuration:0.3f],
                                                                        ]]] withKey:ACTIONKEY_ADDFLOWER];
     self.isGameStart = NO;
@@ -191,38 +181,27 @@ static const uint32_t flowerCategory = 0x1 << 4;
 - (void)addInstruction{
     self.hitSakuraToScore = [SKLabelNode labelNodeWithFontNamed:@"AmericanTypewriter"];
     _hitSakuraToScore.fontSize = 20.0f;
-    
     _hitSakuraToScore.position = CGPointMake(self.frame.size.width / 2, CGRectGetMidY(self.frame)-60);
     _hitSakuraToScore.fontColor = COLOR_LABEL;
     _hitSakuraToScore.zPosition=100;
-    
     _hitSakuraToScore.text=@"Hit Sakura to Score";
-    
     [self addChild:_hitSakuraToScore];
-    
-    
     self.tapToStart = [SKLabelNode labelNodeWithFontNamed:@"AmericanTypewriter-Bold"];
     _tapToStart.fontSize = 20.0f;
-    
     _tapToStart.position = CGPointMake(self.frame.size.width / 2, CGRectGetMidY(self.frame)-100);
     _tapToStart.fontColor = COLOR_LABEL;
     _tapToStart.zPosition=100;
-    
     _tapToStart.text=@"Tap to Fly";
-    
     [self addChild:_tapToStart];
-    
 }
 - (void)addHeroNode
 {
     self.hero=[SKSpriteNode spriteNodeWithImageNamed:@"player"];
     SKTexture* texture=[SKTexture textureWithImageNamed:@"player"];
     _hero.physicsBody=[SKPhysicsBody bodyWithTexture:texture size:_hero.size];
-    
     _hero.anchorPoint = CGPointMake(0.5, 0.5);
     _hero.position = CGPointMake(self.frame.size.width / 2, CGRectGetMidY(self.frame));
     _hero.name = NODENAME_HERO;
-    
     _hero.physicsBody.categoryBitMask = heroCategory;
     _hero.physicsBody.collisionBitMask = wallCategory | groundCategory|edgeCategory;
     _hero.physicsBody.contactTestBitMask = holeCategory | wallCategory | groundCategory|flowerCategory;
@@ -232,7 +211,6 @@ static const uint32_t flowerCategory = 0x1 << 4;
     _hero.physicsBody.restitution = 0.4;
     _hero.physicsBody.usesPreciseCollisionDetection = NO;
     [self addChild:_hero];
-    
     [_hero runAction:[SKAction repeatActionForever:[self getFlyAction]]
              withKey:ACTIONKEY_FLY];
 }
@@ -258,7 +236,7 @@ static const uint32_t flowerCategory = 0x1 << 4;
     [self addChild:_ground];
 }
 
-- (void)addDust
+- (void)addFlower
 {
     
     SKSpriteNode *flowerNode = [SKSpriteNode spriteNodeWithImageNamed:@"projectile"];
@@ -271,7 +249,6 @@ static const uint32_t flowerCategory = 0x1 << 4;
     flowerNode.physicsBody.affectedByGravity=NO;
     flowerNode.name = NODENAME_FLOWER;
     flowerNode.position = CGPointMake(self.frame.size.width, arc4random() % (int)(self.frame.size.height / 3) + self.frame.size.height *2/ 3);
-    
     SKAction* actionMove=[SKAction moveTo:CGPointMake(-flowerNode.frame.size.width, arc4random() %(int)(self.frame.size.height / 5) + self.frame.size.height / 2) duration:2.0f];
     SKAction* actionRemove = [SKAction removeFromParent];
     [flowerNode runAction:[SKAction moveTo:CGPointMake(-flowerNode.frame.size.width, arc4random() %(int)(self.frame.size.height / 5) + self.frame.size.height / 2) duration:2.0f]];
@@ -282,45 +259,34 @@ static const uint32_t flowerCategory = 0x1 << 4;
 - (void)addWall
 {
     CGFloat spaceHeigh = self.frame.size.height - GROUND_HEIGHT;
-    
     float random= arc4random() % 4;
     CGFloat holeLength = HERO_SIZE.height * (2.0+random*0.1);
-    
     int holePosition = arc4random() % (int)((spaceHeigh - holeLength) / HERO_SIZE.height);
-    
     CGFloat x = self.frame.size.width;
-    
     CGFloat upHeight = holePosition * HERO_SIZE.height;
     if (upHeight > 0) {
         SKSpriteNode *upWall = [SKSpriteNode spriteNodeWithColor:COLOR_WALL size:CGSizeMake(WALL_WIDTH, upHeight)];
         upWall.anchorPoint = CGPointMake(0, 0);
         upWall.position = CGPointMake(x, self.frame.size.height - upHeight);
         upWall.name = NODENAME_WALL;
-        
         upWall.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:upWall.size center:CGPointMake(upWall.size.width / 2.0f, upWall.size.height / 2.0f)];
         upWall.physicsBody.categoryBitMask = wallCategory;
         upWall.physicsBody.dynamic = NO;
         upWall.physicsBody.friction = 0;
-        
         [upWall runAction:_moveWallAction withKey:ACTIONKEY_MOVEWALL];
-        
         [self addChild:upWall];
     }
-    
     CGFloat downHeight = spaceHeigh - upHeight - holeLength;
     if (downHeight > 0) {
         SKSpriteNode *downWall = [SKSpriteNode spriteNodeWithColor:COLOR_WALL size:CGSizeMake(WALL_WIDTH, downHeight)];
         downWall.anchorPoint = CGPointMake(0, 0);
         downWall.position = CGPointMake(x, GROUND_HEIGHT);
         downWall.name = NODENAME_WALL;
-        
         downWall.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:downWall.size center:CGPointMake(downWall.size.width / 2.0f, downWall.size.height / 2.0f)];
         downWall.physicsBody.categoryBitMask = wallCategory;
         downWall.physicsBody.dynamic = NO;
         downWall.physicsBody.friction = 0;
-        
         [downWall runAction:_moveWallAction withKey:ACTIONKEY_MOVEWALL];
-        
         [self addChild:downWall];
     }
     
@@ -328,13 +294,10 @@ static const uint32_t flowerCategory = 0x1 << 4;
     hole.anchorPoint = CGPointMake(0, 0);
     hole.position = CGPointMake(x, self.frame.size.height - upHeight - holeLength);
     hole.name = NODENAME_HOLE;
-    
     hole.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:hole.size center:CGPointMake(hole.size.width / 2.0f, hole.size.height / 2.0f)];
     hole.physicsBody.categoryBitMask = holeCategory;
     hole.physicsBody.dynamic = NO;
-    
     [hole runAction:_moveWallAction withKey:ACTIONKEY_MOVEWALL];
-    
     [self addChild:hole];
 }
 
@@ -343,7 +306,6 @@ static const uint32_t flowerCategory = 0x1 << 4;
     if(self.hero&&!_isGameOver){
         if ( self.hero.position.x<10) {
             [self gameOver];
-            
         }else if(self.hero.position.x>self.frame.size.width){
             self.hero.position =CGPointMake(self.hero.position.x-20, self.hero.position.y);
         }
@@ -354,20 +316,17 @@ static const uint32_t flowerCategory = 0x1 << 4;
             *stop = YES;
             return;
         }
-        
         if (node.position.x <= -WALL_WIDTH) {
             wallCount++;
             [node removeFromParent];
         }
     }];
-    
     [self enumerateChildNodesWithName:NODENAME_HOLE usingBlock:^(SKNode *node, BOOL *stop) {
         if (node.position.x <= -WALL_WIDTH) {
             [node removeFromParent];
             *stop = YES;
         }
     }];
-    
     [self enumerateChildNodesWithName:NODENAME_FLOWER usingBlock:^(SKNode *node, BOOL *stop) {
         if (node.position.x <= -node.frame.size.width) {
             [node removeFromParent];
@@ -395,7 +354,6 @@ static const uint32_t flowerCategory = 0x1 << 4;
     if (_isGameOver) {
         return;
     }
-    
     SKPhysicsBody *firstBody, *secondBody;
     
     if (contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask) {
@@ -409,18 +367,13 @@ static const uint32_t flowerCategory = 0x1 << 4;
         if(secondBody.node.parent&&self.isGameStart){
             int currentPoint = [_labelNode.text intValue];
             _labelNode.text = [NSString stringWithFormat:@"%d", currentPoint + 1];
-
             [self playSoundWithName:@"sfx_wing.caf"];
-            
             NSString *burstPath =
             [[NSBundle mainBundle]
              pathForResource:@"MyParticle" ofType:@"sks"];
-            
             SKEmitterNode *burstNode =
             [NSKeyedUnarchiver unarchiveObjectWithFile:burstPath];
-            
             burstNode.position = secondBody.node.position;
-            
             [secondBody.node removeFromParent];
             [self addChild:burstNode];
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -428,15 +381,12 @@ static const uint32_t flowerCategory = 0x1 << 4;
             });
         }
     }
-    
 }
 - (void) didEndContact:(SKPhysicsContact *)contact{
     if (_isGameOver) {
         return;
     }
-    
     SKPhysicsBody *firstBody, *secondBody;
-    
     if (contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask) {
         firstBody = contact.bodyA;
         secondBody = contact.bodyB;
@@ -444,21 +394,11 @@ static const uint32_t flowerCategory = 0x1 << 4;
         firstBody = contact.bodyB;
         secondBody = contact.bodyA;
     }
-    
+    return;
     if ((firstBody.categoryBitMask & heroCategory) && (secondBody.categoryBitMask & holeCategory)) {
-//        if(firstBody.node .position.x>secondBody.node.position.x){
-//            if(secondBody.node.parent){
-//        int currentPoint = [_labelNode.text intValue];
-//        _labelNode.text = [NSString stringWithFormat:@"%d", currentPoint - 1];
-////                [self playSoundWithName:@"sfx_point.caf"];
-//            [secondBody.node removeFromParent];
-//            }
-//        }
+        //Another flappy bird? No...
     }
 }
-
-
-
 @end
 
 
