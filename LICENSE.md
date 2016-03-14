@@ -1,3 +1,5 @@
+BSD License
+
 Copyright (c) 2016, Chenglin Liu https://github.com/l800891
 
 All rights reserved.
