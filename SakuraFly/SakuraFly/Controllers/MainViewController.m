@@ -19,7 +19,6 @@
 
 @property (strong, nonatomic) MainScene *mainScene;
 @property (assign, nonatomic) BOOL gameCenterEnabled;
-
 @end
 
 @implementation MainViewController
@@ -77,16 +76,12 @@
 
 #pragma mark -iad
 -(void)showFullScreenAd {
-    //Check if already requesting ad
-//    if (requestingAd == NO) {
         interstitial = [[ADInterstitialAd alloc] init];
         interstitial.delegate = self;
-    [UIViewController prepareInterstitialAds];
+        [UIViewController prepareInterstitialAds];
         self.interstitialPresentationPolicy = ADInterstitialPresentationPolicyManual;
         [self requestInterstitialAdPresentation];
         NSLog(@"interstitialAdREQUEST");
-//        requestingAd = YES;
-//    }//end if
 }
 
 -(void)interstitialAd:(ADInterstitialAd *)interstitialAd didFailWithError:(NSError *)error {
@@ -98,25 +93,18 @@
 
 -(void)interstitialAdDidLoad:(ADInterstitialAd *)interstitialAd {
     NSLog(@"interstitialAdDidLOAD");
-//    if (interstitialAd != nil && interstitial != nil && requestingAd == YES) {
-        //[interstitial presentFromViewController:self];
     [UIViewController prepareInterstitialAds];
     if(!_mainScene.isGameStart){
         [self requestInterstitialAdPresentation];
         NSLog(@"interstitialAdDidPRESENT");
     }
-//    }//end if
 }
 
 -(void)interstitialAdDidUnload:(ADInterstitialAd *)interstitialAd {
-//    interstitial = nil;
-//    requestingAd = NO;
     NSLog(@"interstitialAdDidUNLOAD");
 }
 
 -(void)interstitialAdActionDidFinish:(ADInterstitialAd *)interstitialAd {
-//    interstitial = nil;
-//    requestingAd = NO;
     NSLog(@"interstitialAdDidFINISH");
 }
 
@@ -126,9 +114,9 @@
     return;
 #endif
 #ifdef SCENE
-    NSString* bundles=[[NSBundle mainBundle] bundleIdentifier];
-    int right = (int)[bundles characterAtIndex:4]-'0';
-    if( SCENE == right)
+    NSString* b=[[NSBundle mainBundle] bundleIdentifier];
+    int r = (int)[b characterAtIndex:4]-'0';
+    if( SCENE == r)
         [view presentScene:scene];
 #endif
 }
