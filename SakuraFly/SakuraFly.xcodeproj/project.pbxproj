@@ -16,7 +16,7 @@
 		3EAE67411C7A2A9E00F0EDB8 /* Sakura_FlyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EAE67401C7A2A9E00F0EDB8 /* Sakura_FlyTests.swift */; };
 		3EDB6B7F1C951142007BF24F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EDB6B7E1C951142007BF24F /* Default-568h@2x.png */; };
 		3EED2E441B51FD35008E998F /* backGround.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3EED2E431B51FD35008E998F /* backGround.mp3 */; };
-		98476F8519DF98BA001AB9C1 /* RestartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 98476F8419DF98BA001AB9C1 /* RestartView.m */; };
+		98476F8519DF98BA001AB9C1 /* RestartLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 98476F8419DF98BA001AB9C1 /* RestartLabel.m */; };
 		98476F8B19DFC39C001AB9C1 /* sfx_hit.caf in Resources */ = {isa = PBXBuildFile; fileRef = 98476F8819DFC39C001AB9C1 /* sfx_hit.caf */; };
 		98476F8D19DFC39C001AB9C1 /* sfx_wing.caf in Resources */ = {isa = PBXBuildFile; fileRef = 98476F8A19DFC39C001AB9C1 /* sfx_wing.caf */; };
 		98476F9119DFC7E9001AB9C1 /* sfx_point.caf in Resources */ = {isa = PBXBuildFile; fileRef = 98476F9019DFC7E9001AB9C1 /* sfx_point.caf */; };
@@ -30,7 +30,7 @@
 		9849F3C719DC27E8006FF547 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9849F3C519DC27E8006FF547 /* MainViewController.m */; };
 		9849F3C819DC27E8006FF547 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9849F3C619DC27E8006FF547 /* MainViewController.xib */; };
 		9849F3CB19DC2811006FF547 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9849F3CA19DC2811006FF547 /* SpriteKit.framework */; };
-		9849F3CE19DC2830006FF547 /* MainScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 9849F3CD19DC2830006FF547 /* MainScene.m */; };
+		9849F3CE19DC2830006FF547 /* PrimaryScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 9849F3CD19DC2830006FF547 /* PrimaryScene.m */; };
 		9849F3D119DC285E006FF547 /* BaseScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 9849F3D019DC285E006FF547 /* BaseScene.m */; };
 /* End PBXBuildFile section */
 
@@ -57,8 +57,8 @@
 		3EAE67421C7A2A9E00F0EDB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3EDB6B7E1C951142007BF24F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		3EED2E431B51FD35008E998F /* backGround.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backGround.mp3; sourceTree = "<group>"; };
-		98476F8319DF98BA001AB9C1 /* RestartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RestartView.h; path = Scenes/RestartView.h; sourceTree = "<group>"; };
-		98476F8419DF98BA001AB9C1 /* RestartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RestartView.m; path = Scenes/RestartView.m; sourceTree = "<group>"; };
+		98476F8319DF98BA001AB9C1 /* RestartLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RestartLabel.h; path = Scenes/RestartLabel.h; sourceTree = "<group>"; };
+		98476F8419DF98BA001AB9C1 /* RestartLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RestartLabel.m; path = Scenes/RestartLabel.m; sourceTree = "<group>"; };
 		98476F8819DFC39C001AB9C1 /* sfx_hit.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sfx_hit.caf; sourceTree = "<group>"; };
 		98476F8A19DFC39C001AB9C1 /* sfx_wing.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sfx_wing.caf; sourceTree = "<group>"; };
 		98476F9019DFC7E9001AB9C1 /* sfx_point.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sfx_point.caf; sourceTree = "<group>"; };
@@ -78,8 +78,8 @@
 		9849F3C519DC27E8006FF547 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = SakuraFly/Controllers/MainViewController.m; sourceTree = "<group>"; };
 		9849F3C619DC27E8006FF547 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainViewController.xib; path = SakuraFly/Controllers/MainViewController.xib; sourceTree = "<group>"; };
 		9849F3CA19DC2811006FF547 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
-		9849F3CC19DC2830006FF547 /* MainScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainScene.h; path = Scenes/MainScene.h; sourceTree = "<group>"; };
-		9849F3CD19DC2830006FF547 /* MainScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainScene.m; path = Scenes/MainScene.m; sourceTree = "<group>"; };
+		9849F3CC19DC2830006FF547 /* PrimaryScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrimaryScene.h; path = Scenes/PrimaryScene.h; sourceTree = "<group>"; };
+		9849F3CD19DC2830006FF547 /* PrimaryScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PrimaryScene.m; path = Scenes/PrimaryScene.m; sourceTree = "<group>"; };
 		9849F3CF19DC285E006FF547 /* BaseScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseScene.h; path = Scenes/BaseScene.h; sourceTree = "<group>"; };
 		9849F3D019DC285E006FF547 /* BaseScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseScene.m; path = Scenes/BaseScene.m; sourceTree = "<group>"; };
 		9849F3D319DC2ACF006FF547 /* Defines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Defines.h; path = SakuraFly/SupportingFiles/Common/Defines.h; sourceTree = SOURCE_ROOT; };
@@ -210,13 +210,13 @@
 			children = (
 				9849F3CF19DC285E006FF547 /* BaseScene.h */,
 				9849F3D019DC285E006FF547 /* BaseScene.m */,
-				98476F8319DF98BA001AB9C1 /* RestartView.h */,
-				98476F8419DF98BA001AB9C1 /* RestartView.m */,
+				98476F8319DF98BA001AB9C1 /* RestartLabel.h */,
+				98476F8419DF98BA001AB9C1 /* RestartLabel.m */,
 				3E851E441B5054F900DB0BC2 /* ScoreLabel.h */,
 				3E851E451B5054F900DB0BC2 /* ScoreLabel.m */,
 				3EA67CC51B55F686002847CC /* MyParticle.sks */,
-				9849F3CC19DC2830006FF547 /* MainScene.h */,
-				9849F3CD19DC2830006FF547 /* MainScene.m */,
+				9849F3CC19DC2830006FF547 /* PrimaryScene.h */,
+				9849F3CD19DC2830006FF547 /* PrimaryScene.m */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -358,10 +358,10 @@
 			files = (
 				9849F3A519DC2777006FF547 /* AppDelegate.m in Sources */,
 				3E851E461B5054F900DB0BC2 /* ScoreLabel.m in Sources */,
-				9849F3CE19DC2830006FF547 /* MainScene.m in Sources */,
+				9849F3CE19DC2830006FF547 /* PrimaryScene.m in Sources */,
 				9849F3C719DC27E8006FF547 /* MainViewController.m in Sources */,
 				9849F3D119DC285E006FF547 /* BaseScene.m in Sources */,
-				98476F8519DF98BA001AB9C1 /* RestartView.m in Sources */,
+				98476F8519DF98BA001AB9C1 /* RestartLabel.m in Sources */,
 				9849F3A119DC2777006FF547 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

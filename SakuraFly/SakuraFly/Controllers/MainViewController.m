@@ -8,7 +8,7 @@
 
 #import "MainViewController.h"
 #import <SpriteKit/SpriteKit.h>
-#import "MainScene.h"
+#import "PrimaryScene.h"
 
 @import GameKit;
 @interface MainViewController (){
@@ -17,7 +17,7 @@
     BOOL requestingAd;
 }
 
-@property (strong, nonatomic) MainScene *mainScene;
+@property (strong, nonatomic) PrimaryScene *mainScene;
 @property (assign, nonatomic) BOOL gameCenterEnabled;
 @end
 
@@ -38,7 +38,7 @@
 {
     [super viewDidLoad];
 
-    self.mainScene = [[MainScene alloc] initWithSize:CGSizeMake(self.view.frame.size.width, self.view.frame.size.height)];
+    self.mainScene = [[PrimaryScene alloc] initWithSize:CGSizeMake(self.view.frame.size.width, self.view.frame.size.height)];
     _mainScene.scaleMode = SKSceneScaleModeAspectFit;
     [_mainScene runAction:[SKAction repeatActionForever:[SKAction playSoundFileNamed:@"backGround.mp3" waitForCompletion:YES]]];
     SKView *view = (SKView *)self.view;

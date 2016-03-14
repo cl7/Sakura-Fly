@@ -6,11 +6,11 @@
 //  Copyright (c) 2015年 Chenglin. All rights reserved.
 //
 #define NODENAME_BUTTON @"button"
-#import "RestartView.h"
+#import "RestartLabel.h"
 #import "MainViewController.h"
 
 @import GameKit;
-@interface RestartView()
+@interface RestartLabel()
 @property (strong, nonatomic) SKSpriteNode *button;
 @property (strong, nonatomic) SKLabelNode *labelNode;
 @property (strong, nonatomic) SKLabelNode *scoreLabelNode;
@@ -19,7 +19,7 @@
 @property (strong, nonatomic) SKLabelNode *gameCenterLabel;
 @end
 
-@implementation RestartView
+@implementation RestartLabel
 
 - (id)initWithColor:(UIColor *)color size:(CGSize)size
 {
@@ -96,9 +96,9 @@
 }
 
 
-+ (RestartView *)getInstanceWithSize:(CGSize)size Point:(NSString *)point
++ (RestartLabel *)getInstanceWithSize:(CGSize)size Point:(NSString *)point
 {
-    RestartView *restartView = [RestartView spriteNodeWithColor:color(255, 255, 255, 0.6) size:size];
+    RestartLabel *restartView = [RestartLabel spriteNodeWithColor:color(255, 255, 255, 0.6) size:size];
     restartView.anchorPoint = CGPointMake(0, 0);
     restartView.finalPoint=point;
     [restartView addScoreLabelSize:size];
