@@ -8,6 +8,7 @@
 
 #import "InitialViewController.h"
 #import "PrimaryScene.h"
+#import "GameKitHeaders.h"
 
 @import GameKit;
 @interface InitialViewController (){

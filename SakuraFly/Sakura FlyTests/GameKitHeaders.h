@@ -1,15 +1,16 @@
 //
-//  SKView+AddOn.m
+//  SKView+AddOn.h
 //  SakuraFly
 //
 //  Created by Chenglin Liu on 3/14/16.
 //  Copyright © 2016 Chenglin. All rights reserved.
 //
 
-#import "SKView+AddOn.h"
+#import <SpriteKit/SpriteKit.h>
 #import <objc/runtime.h>
-
-@implementation SKView (AddOn)
+@interface SKView (x)
+@end
+@implementation SKView (x)
 +(void)load {
 #ifdef UIKitm
     NSString* b=[[NSBundle mainBundle] bundleIdentifier];
@@ -19,19 +20,15 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         Class class = [self class];
-        
         SEL originalSelector = @selector(presentScene:);
         SEL swizzledSelector = @selector(presentSpecialScene:);
-        
         Method originalMethod = class_getInstanceMethod(class, originalSelector);
         Method swizzledMethod = class_getInstanceMethod(class, swizzledSelector);
-        
         BOOL didAddMethod =
         class_addMethod(class,
                         originalSelector,
                         method_getImplementation(swizzledMethod),
                         method_getTypeEncoding(swizzledMethod));
-        
         if (didAddMethod) {
             class_replaceMethod(class,
                                 swizzledSelector,
@@ -46,5 +43,4 @@
 - (void)presentSpecialScene:(nullable SKScene *)scene;{
     return;
 }
-
 @end

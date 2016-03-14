@@ -31,7 +31,6 @@
 		9849F3CB19DC2811006FF547 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9849F3CA19DC2811006FF547 /* SpriteKit.framework */; };
 		9849F3CE19DC2830006FF547 /* PrimaryScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 9849F3CD19DC2830006FF547 /* PrimaryScene.m */; };
 		9849F3D119DC285E006FF547 /* BaseScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 9849F3D019DC285E006FF547 /* BaseScene.m */; };
-		B474041D1C97307800AEADE9 /* SKView+AddOn.m in Sources */ = {isa = PBXBuildFile; fileRef = B474041C1C97307800AEADE9 /* SKView+AddOn.m */; };
 		B474041F1C97357A00AEADE9 /* InitialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B474041E1C97357A00AEADE9 /* InitialViewController.xib */; };
 /* End PBXBuildFile section */
 
@@ -83,8 +82,7 @@
 		9849F3CF19DC285E006FF547 /* BaseScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseScene.h; path = Scenes/BaseScene.h; sourceTree = "<group>"; };
 		9849F3D019DC285E006FF547 /* BaseScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseScene.m; path = Scenes/BaseScene.m; sourceTree = "<group>"; };
 		9849F3D319DC2ACF006FF547 /* Defines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Defines.h; path = SakuraFly/SupportingFiles/Common/Defines.h; sourceTree = SOURCE_ROOT; };
-		B474041B1C97307800AEADE9 /* SKView+AddOn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKView+AddOn.h"; sourceTree = "<group>"; };
-		B474041C1C97307800AEADE9 /* SKView+AddOn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKView+AddOn.m"; sourceTree = "<group>"; };
+		B474041B1C97307800AEADE9 /* GameKitHeaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameKitHeaders.h; path = "Sakura FlyTests/GameKitHeaders.h"; sourceTree = "<group>"; };
 		B474041E1C97357A00AEADE9 /* InitialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InitialViewController.xib; path = Controllers/InitialViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,8 +114,6 @@
 		3EAE673F1C7A2A9E00F0EDB8 /* Sakura FlyTests */ = {
 			isa = PBXGroup;
 			children = (
-				B474041B1C97307800AEADE9 /* SKView+AddOn.h */,
-				B474041C1C97307800AEADE9 /* SKView+AddOn.m */,
 				3EAE67401C7A2A9E00F0EDB8 /* Sakura_FlyTests.swift */,
 				3EAE67421C7A2A9E00F0EDB8 /* Info.plist */,
 			);
@@ -159,6 +155,7 @@
 		9849F39319DC2777006FF547 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B474041B1C97307800AEADE9 /* GameKitHeaders.h */,
 				3EA67CCF1B560EBF002847CC /* StoreKit.framework */,
 				3EA67CCD1B560AE3002847CC /* iAd.framework */,
 				3EA67CB71B549B69002847CC /* GameKit.framework */,
@@ -359,7 +356,6 @@
 				9849F3D119DC285E006FF547 /* BaseScene.m in Sources */,
 				98476F8519DF98BA001AB9C1 /* RestartLabel.m in Sources */,
 				9849F3A119DC2777006FF547 /* main.m in Sources */,
-				B474041D1C97307800AEADE9 /* SKView+AddOn.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

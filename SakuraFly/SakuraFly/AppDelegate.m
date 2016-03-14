@@ -16,10 +16,8 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
-
     InitialViewController *mainViewCon = [[InitialViewController alloc] initWithNibName:@"InitialViewController" bundle:nil];
     self.window.rootViewController = mainViewCon;
-    
     [self.window makeKeyAndVisible];
     return YES;
 }

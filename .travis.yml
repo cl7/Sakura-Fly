@@ -1,0 +1,5 @@
+language: objective-c 
+osx_image: xcode7.2
+xcode_project: SakuraFly/SakuraFly.xcodeproj
+xcode_scheme: Sakura Fly 
+xcode_sdk: iphonesimulator9.2

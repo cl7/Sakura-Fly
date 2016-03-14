@@ -23,5 +23,3 @@ Tap to keep paper plane on screen and hit sakura flowers to score, it may feel t
 ## License
 Source code is available under the MIT license.
 
-Although technically permitted by license terms, please do not submit this code to App Store.
-
