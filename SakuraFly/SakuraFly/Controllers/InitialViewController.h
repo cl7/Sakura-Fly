@@ -9,9 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <iAd/iAd.h>
 #import <AVFoundation/AVFoundation.h>
+#import <SpriteKit/SpriteKit.h>
 
-@interface MainViewController : UIViewController<UITextFieldDelegate,ADInterstitialAdDelegate,ADBannerViewDelegate, AVAudioPlayerDelegate>
+@interface InitialViewController : UIViewController<UITextFieldDelegate,ADInterstitialAdDelegate,ADBannerViewDelegate, AVAudioPlayerDelegate>
 @property (nonatomic, copy) NSString *leaderboardIdentifier;
 
 -(void)showFullScreenAd;
+
 @end

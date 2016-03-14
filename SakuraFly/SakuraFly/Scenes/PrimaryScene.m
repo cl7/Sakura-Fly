@@ -8,7 +8,7 @@
 
 #import "PrimaryScene.h"
 #import "RestartLabel.h"
-#import "MainViewController.h"
+#import "InitialViewController.h"
 
 @import GameKit;
 
@@ -252,7 +252,6 @@ static const uint32_t flowerCategory = 0x1 << 4;
     flowerNode.position = CGPointMake(self.frame.size.width, arc4random() % (int)(self.frame.size.height / 3) + self.frame.size.height *2/ 3);
     SKAction* actionMove=[SKAction moveTo:CGPointMake(-flowerNode.frame.size.width, arc4random() %(int)(self.frame.size.height / 5) + self.frame.size.height / 2) duration:2.0f];
     SKAction* actionRemove = [SKAction removeFromParent];
-    [flowerNode runAction:[SKAction moveTo:CGPointMake(-flowerNode.frame.size.width, arc4random() %(int)(self.frame.size.height / 5) + self.frame.size.height / 2) duration:2.0f]];
     [flowerNode runAction:[SKAction sequence:@[actionMove, actionRemove]]];
     [self addChild:flowerNode];
 }
@@ -397,7 +396,6 @@ static const uint32_t flowerCategory = 0x1 << 4;
     }
     return;
     if ((firstBody.categoryBitMask & heroCategory) && (secondBody.categoryBitMask & holeCategory)) {
-        //Another flappy bird? No...
     }
 }
 @end

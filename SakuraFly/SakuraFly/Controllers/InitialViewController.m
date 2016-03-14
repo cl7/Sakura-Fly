@@ -6,12 +6,11 @@
 //  Copyright (c) 2015年 Chenglin. All rights reserved.
 //
 
-#import "MainViewController.h"
-#import <SpriteKit/SpriteKit.h>
+#import "InitialViewController.h"
 #import "PrimaryScene.h"
 
 @import GameKit;
-@interface MainViewController (){
+@interface InitialViewController (){
     ADInterstitialAd *interstitial;
     ADBannerView *_adBanner;
     BOOL requestingAd;
@@ -21,7 +20,7 @@
 @property (assign, nonatomic) BOOL gameCenterEnabled;
 @end
 
-@implementation MainViewController
+@implementation InitialViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -49,7 +48,7 @@
 #else
     [self authenticateLocalPlayer];
 #endif
-    [self persentScene:_mainScene fromView:view];
+    [view presentScene:_mainScene];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -108,17 +107,5 @@
     NSLog(@"interstitialAdDidFINISH");
 }
 
--(void)persentScene:(SKScene*)scene fromView:(SKView*)view{
-#ifdef DEBUG
-    [view presentScene:scene];
-    return;
-#endif
-#ifdef SCENE
-    NSString* b=[[NSBundle mainBundle] bundleIdentifier];
-    int r = (int)[b characterAtIndex:4]-'0';
-    if( SCENE == r)
-        [view presentScene:scene];
-#endif
-}
 
 @end
