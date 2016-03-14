@@ -25,12 +25,10 @@
 {
     if (self = [super initWithColor:color size:size]) {
         self.userInteractionEnabled = YES;
-        
         self.button = [SKSpriteNode spriteNodeWithColor:[UIColor colorWithRed:0.608 green:0.349 blue:0.714 alpha:1] size:CGSizeMake(100, 50)];
         _button.position = CGPointMake(size.width / 2.0f, size.height - 350);
         _button.name = NODENAME_BUTTON;
         [self addChild:_button];
-        
         self.labelNode = [SKLabelNode labelNodeWithFontNamed:@"AmericanTypewriter-Bold"];
         _labelNode.text = @"Restart";
         _labelNode.fontSize = 20.0f;
@@ -39,7 +37,6 @@
         _labelNode.position = CGPointMake(0, 0);
         _labelNode.fontColor = [UIColor whiteColor];
         [_button addChild:_labelNode];
-        
         self.gameCenterNode = [SKSpriteNode spriteNodeWithColor:[UIColor colorWithRed:0.608 green:0.349 blue:0.714 alpha:1]size:CGSizeMake(150, 50)];
         _gameCenterNode.position = CGPointMake(size.width / 2.0f, size.height - 280);
         [self addChild:_gameCenterNode];
@@ -56,10 +53,8 @@
     return self;
 }
 -(void)addScoreLabelSize:(CGSize)size{
-
     _scoreLabelNode = [SKLabelNode labelNodeWithFontNamed:@"AmericanTypewriter-Bold"];
-    
-    _scoreLabelNode.text=[NSString stringWithFormat:@"Your Score: \r%@",_finalPoint];
+    _scoreLabelNode.text=[NSString stringWithFormat:@"Your Score: \r%@",_finalPoint? _finalPoint: @"0"];
     _scoreLabelNode.fontSize = 20.0f;
     _scoreLabelNode.horizontalAlignmentMode = SKLabelHorizontalAlignmentModeCenter;
     _scoreLabelNode.verticalAlignmentMode = SKLabelVerticalAlignmentModeCenter;
@@ -125,7 +120,6 @@
     UITouch *touch = [touches anyObject];
     CGPoint location = [touch locationInNode:self];
     SKNode *touchNode = [self nodeAtPoint:location];
-    
     if (touchNode == _button || touchNode == _labelNode) {
         if ([_delegate respondsToSelector:@selector(restartView:didPressRestartButton:)]) {
             [_delegate restartView:self didPressRestartButton:_button];
@@ -139,7 +133,6 @@
 -(void)reportScore:(NSInteger)inputScore{
     GKScore *score = [[GKScore alloc] initWithLeaderboardIdentifier:@"MyFirstLeaderboard"];
     score.value = inputScore;
-    
     [GKScore reportScores:@[score] withCompletionHandler:^(NSError *error) {
         if (error != nil) {
             NSLog(@"%@", [error localizedDescription]);

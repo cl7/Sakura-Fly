@@ -19,7 +19,7 @@
 @interface RestartLabel : SKSpriteNode
 
 @property (weak, nonatomic) id <RestartViewDelegate> delegate;
-@property NSString* finalPoint;
+@property (copy, nonatomic) NSString* finalPoint;
 + (RestartLabel *)getInstanceWithSize:(CGSize)size Point:(NSString *)point;
 - (void)dismiss;
 - (void)showInScene:(SKScene *)scene;
