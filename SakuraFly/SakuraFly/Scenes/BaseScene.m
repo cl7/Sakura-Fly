@@ -21,14 +21,13 @@
     if (_contentCreated) {
         return;
     }
-    
     [self initalize];
     self.contentCreated = YES;
 }
 
 - (void)initalize
 {
-    
+    NSLog(@"Base scene initalized");
 }
 
 @end

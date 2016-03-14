@@ -11,7 +11,8 @@
 #import <AVFoundation/AVFoundation.h>
 #import <SpriteKit/SpriteKit.h>
 
-@interface InitialViewController : UIViewController<UITextFieldDelegate,ADInterstitialAdDelegate,ADBannerViewDelegate, AVAudioPlayerDelegate>
+@interface InitialViewController : UIViewController <UITextFieldDelegate,ADInterstitialAdDelegate,ADBannerViewDelegate, AVAudioPlayerDelegate>
+
 @property (nonatomic, copy) NSString *leaderboardIdentifier;
 
 -(void)showFullScreenAd;

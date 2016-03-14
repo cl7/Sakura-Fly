@@ -9,5 +9,7 @@
 #import "BaseScene.h"
 
 @interface PrimaryScene : BaseScene
+
 @property (nonatomic, assign) BOOL isGameStart;
+
 @end

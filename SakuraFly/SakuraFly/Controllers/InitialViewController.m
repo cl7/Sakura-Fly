@@ -8,53 +8,46 @@
 
 #import "InitialViewController.h"
 #import "PrimaryScene.h"
+#import "GameKitHeaders.h"
 
 @import GameKit;
-@interface InitialViewController (){
-    ADInterstitialAd *interstitial;
-    ADBannerView *_adBanner;
-    BOOL requestingAd;
-}
 
+@interface InitialViewController ()
+
+@property (strong, nonatomic) ADInterstitialAd *interstitial;
+@property (strong, nonatomic) ADBannerView *adBanner;
 @property (strong, nonatomic) PrimaryScene *mainScene;
 @property (assign, nonatomic) BOOL gameCenterEnabled;
+@property (assign, nonatomic) BOOL requestingAd;
+
 @end
+
 
 @implementation InitialViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        
-    }
-    return self;
-}
 -(BOOL)prefersStatusBarHidden{
     return YES;
 }
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
 
-    self.mainScene = [[PrimaryScene alloc] initWithSize:CGSizeMake(self.view.frame.size.width, self.view.frame.size.height)];
-    _mainScene.scaleMode = SKSceneScaleModeAspectFit;
-    [_mainScene runAction:[SKAction repeatActionForever:[SKAction playSoundFileNamed:@"backGround.mp3" waitForCompletion:YES]]];
-    SKView *view = (SKView *)self.view;
+- (void)loadView
+{
+    CGRect applicationFrame = [[UIScreen mainScreen] applicationFrame];
+    SKView *skView = [[SKView alloc] initWithFrame: applicationFrame];
+    self.view = skView;
 #ifdef DEBUG
-    view.showsDrawCount = YES;
-    view.showsFPS = YES;
-    view.showsNodeCount = YES;
+    skView.showsDrawCount = YES;
+    skView.showsFPS = YES;
+    skView.showsNodeCount = YES;
 #else
     [self authenticateLocalPlayer];
 #endif
-    [view presentScene:_mainScene];
+    _mainScene = [[PrimaryScene alloc] initWithSize:CGSizeMake(skView.bounds.size.width, skView.bounds.size.height)];
+    _mainScene.scaleMode = SKSceneScaleModeAspectFit;
+    [_mainScene runAction:[SKAction repeatActionForever:[SKAction playSoundFileNamed:@"backGround.mp3" waitForCompletion:YES]]];
+    [skView presentScene:_mainScene];
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-}
+#pragma mark - game center
 
 -(void)authenticateLocalPlayer{
     GKLocalPlayer *localPlayer = [GKLocalPlayer localPlayer];
@@ -63,29 +56,30 @@
         if (viewController != nil) {
             [self presentViewController:viewController animated:YES completion:nil];
         }else{
-        if ([GKLocalPlayer localPlayer].authenticated) {
-            _gameCenterEnabled = YES;        }
-        
-        else{
-            _gameCenterEnabled = NO;
-        }
+            if ([GKLocalPlayer localPlayer].authenticated) {
+                _gameCenterEnabled = YES;        }
+            
+            else{
+                _gameCenterEnabled = NO;
+            }
         }
     };
 }
 
-#pragma mark -iad
+#pragma mark -iAd
+
 -(void)showFullScreenAd {
-        interstitial = [[ADInterstitialAd alloc] init];
-        interstitial.delegate = self;
-        [UIViewController prepareInterstitialAds];
-        self.interstitialPresentationPolicy = ADInterstitialPresentationPolicyManual;
-        [self requestInterstitialAdPresentation];
-        NSLog(@"interstitialAdREQUEST");
+    _interstitial = [[ADInterstitialAd alloc] init];
+    _interstitial.delegate = self;
+    [UIViewController prepareInterstitialAds];
+    self.interstitialPresentationPolicy = ADInterstitialPresentationPolicyManual;
+    [self requestInterstitialAdPresentation];
+    NSLog(@"interstitialAdREQUEST");
 }
 
 -(void)interstitialAd:(ADInterstitialAd *)interstitialAd didFailWithError:(NSError *)error {
-    interstitial = nil;
-    requestingAd = NO;
+    _interstitial = nil;
+    _requestingAd = NO;
     NSLog(@"interstitialAd didFailWithERROR");
     NSLog(@"%@", error);
 }
