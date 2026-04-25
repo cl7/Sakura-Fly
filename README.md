@@ -21,5 +21,5 @@ Sakura Fly is available free on the App Store.
 Tap to keep paper plane on screen and destory falling sakura flowers to score
 
 ## License
-Under Apache 2.0 license.
+Under GNU Affero General Public License (AGPLv3)
 
